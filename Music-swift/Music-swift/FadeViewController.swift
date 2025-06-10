@@ -9,15 +9,21 @@ import UIKit
 
 class FadeViewController: UIViewController {
 
-   
+    @IBOutlet weak var slider: UISlider!
+    var counter = 0
+    
     override func viewDidAppear(_ animated: Bool){
-        view.backgroundColor = .white
-        var counter = 5.0
-        let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in counter-=1}
-        let alpha = 0.2*counter
-        self.view.backgroundColor = .black
-        if counter > 5 {timer.invalidate()}
+        slider.maximumValue = 100.0
+      
+        let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ timer in self.counter+=1
+            self.slider.value = Float(self.counter)
+            
+            
+        }
+        
+        if counter > 100 {timer.invalidate()}
     }
 
 
+    
 }
