@@ -168,7 +168,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Music_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,10 +255,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24" translatesAutoresizingMaskIntoConstraints="NO" id="NP5-IK-MHh">
-                                <rect key="frame" x="157" y="530" width="79" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbU-sw-sJo">
                                 <rect key="frame" x="251" y="550" width="57" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -292,12 +288,22 @@
                                     <action selector="slider:" destination="mi8-sT-UuF" eventType="valueChanged" id="2HT-pF-Hh2"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orF-sV-nFc">
+                                <rect key="frame" x="159" y="550" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="sound:" destination="vQb-OM-99g" eventType="touchUpInside" id="ZB5-G5-HuA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0zw-wm-FeB"/>
                         <color key="backgroundColor" red="0.79333736266306676" green="0.45258959118544284" blue="0.60871782027273547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZDF-Qx-BUj"/>
                     <connections>
+                        <outlet property="button" destination="orF-sV-nFc" id="Kc3-lh-JcB"/>
                         <outlet property="slider" destination="qbv-P6-0sj" id="tL0-di-3F5"/>
                     </connections>
                 </viewController>
@@ -323,10 +329,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zh3-DQ-w9X"/>
-        <segue reference="9VC-ym-ixQ"/>
+        <segue reference="G1M-Hw-cEy"/>
+        <segue reference="gBc-D4-q3u"/>
         <segue reference="3FM-dW-ILV"/>
-        <segue reference="2Ju-bJ-xb2"/>
+        <segue reference="diu-On-DKJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backward" catalog="system" width="128" height="77"/>
@@ -334,7 +340,6 @@
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="lp" width="225" height="225"/>
         <image name="play.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="play_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24" width="512" height="512"/>
         <image name="playpause" catalog="system" width="128" height="79"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

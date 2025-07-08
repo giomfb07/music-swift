@@ -9,10 +9,10 @@ import UIKit
 struct StringData{
     
     let nome: String
-    let color:UIColor
-    
-    
+    let color: UIColor
+
 }
+
 
 class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -21,16 +21,16 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      guard let cell = tableView.dequeueReusableCell(withIdentifier: "StringCell") as? StringTableViewCell else {return UITableViewCell()}
-        cell.configure(string : musicList[indexPath.item])
+        cell.configure(string : musicList [indexPath.item].nome)
         return cell
     }
     
 
     @IBOutlet weak var tableView: UITableView!
-    let musicList: [StringData] =
-    StringData(nome: "Arabella", color: .red),
-    StringData(nome: "Save your tears", color: .yellow),
-    StringData(nome: "Apple", color: .green)
+    let musicList: [StringData] = [
+        StringData(nome: "Arabella",color: .green),
+    StringData(nome: "Coraline",color: .green),
+    StringData(nome: "Apple",color: .green)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,4 +41,3 @@ class ViewController: UIViewController, UITableViewDataSource {
 
 
 }
-

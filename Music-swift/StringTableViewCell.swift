@@ -8,6 +8,13 @@
 import UIKit
 
 class StringTableViewCell: UITableViewCell {
+    
+  
+        func configure(string: String) {
+            self.textLabel?.text = string
+        }
+    
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +28,6 @@ class StringTableViewCell: UITableViewCell {
     }
 
     func configure(string: UITableView)-> Void{
-        self.text = string
+      
     }
 }
